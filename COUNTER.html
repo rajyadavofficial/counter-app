@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Raj Counter App</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial;
+    margin-top: 50px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Counter App 🚀</h1>
+
+<h2 id="result">Score: 0</h2>
+
+<button onclick="increase()">+5</button>
+<button onclick="decrease()">-5</button>
+<button onclick="resetScore()">Reset</button>
+
+<script>
+let score = 0;
+
+function increase() {
+  score = score + 5;
+  updateScreen();
+}
+
+function decrease() {
+  score = score - 5;
+  updateScreen();
+}
+
+function resetScore() {
+  score = 0;
+  updateScreen();
+}
+
+function updateScreen() {
+  document.getElementById("result").innerHTML = "Score: " + score;
+}
+</script>
+
+</body>
+</html>
